@@ -11,13 +11,12 @@ import {
 
  
 async function createNewbookHighlights(title: string, author: string, highlights: string[],  notionInstance: NotionAdapter) {
-  const regex_ = /^.*?(?= \()/g;
   const createPageParams: CreatePageParams = {
     parentDatabaseId: process.env.BOOK_DB_ID as string,
     properties: {
       title: title,
       author: author,
-      bookName: title.match(regex_),
+      bookName: title.match(/^.*?(?= \()/g),
     },
     children: makeHighlightsBlocks(highlights, BlockType.quote),
     icon: Emoji["📘"],
