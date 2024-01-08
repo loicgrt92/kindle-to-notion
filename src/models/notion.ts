@@ -35,15 +35,15 @@ export class Notion {
 
 
   /* Method to get Notion block id of the Notion page given the book name */
-  getIdFromBookName = async (title: string) => {
+  getIdFromBookName = async (bookName: string) => {
     const response = await this.notion.queryDatabase({
       database_id: process.env.BOOK_DB_ID as string,
       filter: {
         or: [
           {
-            property: "Book Name",
+            property: "Title",
             text: {
-              contains: title,
+              contains: bookName,
             },
           },
         ],
