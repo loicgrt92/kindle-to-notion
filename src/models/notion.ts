@@ -43,7 +43,7 @@ export class Notion {
           {
             property: "Book Name",
             text: {
-              equals: bookName,
+              contains: bookName,
             },
           },
         ],
