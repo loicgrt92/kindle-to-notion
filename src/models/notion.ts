@@ -41,7 +41,7 @@ export class Notion {
       filter: {
         or: [
           {
-            property: "Title",
+            property: "Book Name",
             text: {
               contains: bookName,
             },
