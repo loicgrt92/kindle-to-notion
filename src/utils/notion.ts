@@ -77,10 +77,16 @@ export const makePageProperties = (
       ],
     },
    "with notes": {
-                    "id": "%60voJ",
-                    "type": "checkbox",
-                    "checkbox": true
-                }
+      type: "rich_text",
+      rich_text: [
+        {
+          type: "text",
+          text: {
+            content: "true",
+          },
+        },
+      ],
+    },
   };
   return properties;
 };
