@@ -16,7 +16,7 @@ async function createNewbookHighlights(title: string, author: string, highlights
     properties: {
       title: title,
       author: author,
-      bookName: title.match(/^.*?(?= \()/g),
+      bookName: title,
     },
     children: makeHighlightsBlocks(highlights, BlockType.quote),
     icon: Emoji["📘"],
