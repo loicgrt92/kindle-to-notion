@@ -76,6 +76,11 @@ export const makePageProperties = (
         },
       ],
     },
+   "with notes": {
+                    "id": "%60voJ",
+                    "type": "checkbox",
+                    "checkbox": true
+                }
   };
   return properties;
 };
